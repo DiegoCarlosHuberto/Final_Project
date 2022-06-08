@@ -16,7 +16,7 @@ public class AdminPage {
     static final String SBpsw = "cashConcos";
 
     public static void main(String[] args) throws SQLException {
-
+        
         boolean menu = true;
         while (menu) {
             System.out.println("\n----------------------------------"
