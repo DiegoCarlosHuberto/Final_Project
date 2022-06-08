@@ -11,7 +11,9 @@ import java.util.Scanner;
 public class AdminPage {
 
     static Scanner teclado = new Scanner(System.in);
-    static final String JDBC = "jdbc:mysql://localhost:3306/casino";
+    static final String JDBC = "jdbc:mysql://162.16.66.62:3306/casino";
+    static final String BDuser = "admin";
+    static final String SBpsw = "cashConcos";
 
     public static void main(String[] args) throws SQLException {
 
@@ -53,7 +55,7 @@ public class AdminPage {
                     balance();
                     break;
                 case 4:
-                    menu = false;
+                    banearUser();
                 case 5: 
                     menu = false;
                 default: break;
@@ -76,7 +78,7 @@ public class AdminPage {
             System.out.println("Error:" + ex);
         }
 
-        Connection con = DriverManager.getConnection(JDBC, "root", "43226225w");
+        Connection con = DriverManager.getConnection(JDBC, BDuser, SBpsw);
 
         Statement st = con.createStatement();
 
@@ -98,7 +100,7 @@ public class AdminPage {
             System.out.println("Error:" + ex);
         }
 
-        Connection con = DriverManager.getConnection(JDBC, "root", "43226225w");
+        Connection con = DriverManager.getConnection(JDBC, BDuser, SBpsw);
 
         Statement st = con.createStatement();
 
@@ -141,7 +143,7 @@ public class AdminPage {
             System.out.println("Error:" + ex);
         }
 
-        Connection con = DriverManager.getConnection(JDBC, "root", "43226225w");
+        Connection con = DriverManager.getConnection(JDBC, BDuser, SBpsw);
 
         Statement st = con.createStatement();
 
@@ -181,7 +183,7 @@ public class AdminPage {
             System.out.println("Error:" + ex);
         }
 
-        Connection con = DriverManager.getConnection(JDBC, "root", "43226225w");
+        Connection con = DriverManager.getConnection(JDBC, BDuser, SBpsw);
 
         Statement st = con.createStatement();
 
